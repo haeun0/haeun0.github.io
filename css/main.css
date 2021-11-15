@@ -1,0 +1,254 @@
+@charset 'utf-8';
+@import url('notosanskr/NotoSansKR.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.064rem;
+    color: #333;
+}
+
+
+/* 공통 클래스 */
+.clearfix:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
+.container {
+    position: relative;
+    width: 152rem;
+    margin: 0 auto;
+}
+
+/* 비주얼 영역 */
+.visual {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+}
+
+.visual-left {
+    position: relative;
+    display: block;
+    float: left;
+    background-color: #3D6A65;
+    width: 45%;
+    height: 77rem;
+}
+
+.visual-tit {
+    position: absolute;
+    right: 0;
+    top: 59%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1rem;
+    color: #BAAFBD;
+    line-height: 1;
+    text-align: center;
+
+}
+
+.visual-tit img {
+    margin-top: 8.7rem;
+    margin-bottom: 8.7rem;
+}
+
+.visual-tit p {
+    font-size: 2.1rem;
+    font-weight: 300;
+}
+
+.visual-right {
+    position: relative;
+    display: block;
+    float: left;
+    width: 55%;
+    height: 77rem;
+    background-color: #333;
+}
+
+.visual-img {
+    position: relative;
+    display: block;
+    margin-left: 8rem;
+}
+
+/* gnb */
+.nav {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 10rem;
+    text-align: center;
+    background-color: #BAAFBD;
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.menu li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 4.1rem;
+
+    text-align: center;
+}
+
+.menu li a {
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 2.2rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 10rem;
+    text-transform: uppercase;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+/* 프로필 영역 */
+.profile {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 84rem;
+    background-color: #E9E2E7;
+    padding-top: 5.5rem;
+}
+
+.profile .container {}
+
+.tit {
+    position: relative;
+    display: block;
+    font-size: 4.4rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1;
+    letter-spacing: -0.3rem;
+    text-transform: uppercase;
+
+
+}
+
+.profile .tit {
+    margin-bottom: 8.7rem;
+}
+
+.profile-1 {
+    position: relative;
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+.profile-2 {
+    padding-left: 10rem;
+    position: relative;
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+.profile-3 {
+    position: relative;
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+/* 리디자인 영역 */
+.redesign {
+    position: relative;
+    display: block;
+    background-color: #CDCBD9;
+    padding-top: 9.5rem;
+}
+
+.redesign .container {}
+
+.redsingn-left {
+    position: relative;
+    display: block;
+    width: 49rem;
+    height: 63rem;
+
+}
+
+/* 퍼블리싱 영역 */
+.publ {
+    position: relative;
+    display: block;
+}
+
+/* 기타 영역 */
+.others {
+    position: relative;
+    display: block;
+}
+
+/* 라이프 영역 */
+.life {
+    position: relative;
+    display: block;
+}
+
+/* 하단 영역 */
+.footer {
+    position: relative;
+    display: block;
+}

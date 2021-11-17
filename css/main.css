@@ -34,7 +34,7 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.15;
-    letter-spacing: -0.064rem;
+    letter-spacing: 0.0425rem;
     color: #333;
 }
 
@@ -151,7 +151,8 @@ body {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     color: #333;
-    line-height: 10rem;
+    line-height: 1.2;
+    letter-spacing: 0.0425rem;
     text-transform: uppercase;
 }
 
@@ -166,27 +167,31 @@ body {
     width: 100%;
     height: 84rem;
     background-color: #E9E2E7;
-    padding-top: 5.5rem;
+    padding-top: 1rem;
 }
 
-.profile .container {}
+.profile .container {
+    margin-top: 17rem;
+}
 
 .tit {
-    position: relative;
+    position: absolute;
+    left: 19rem;
+    top: 10rem;
     display: block;
     font-size: 4.4rem;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
     color: #333;
     line-height: 1;
-    letter-spacing: -0.3rem;
+    letter-spacing: 0.012rem;
     text-transform: uppercase;
-
+    margin-bottom: 3rem;
 
 }
 
 .profile .tit {
-    margin-bottom: 8.7rem;
+    /* margin-bottom: 8.7rem; */
 }
 
 .profile-1 {
@@ -204,11 +209,29 @@ body {
     width: 33%;
 }
 
+/* 수정 후 삭제 */
+.profile-2 img {
+    position: absolute;
+    left: 30%;
+    top: 0;
+
+}
+
 .profile-3 {
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
     display: block;
     float: left;
     width: 33%;
+}
+
+/* 수정 후 삭제 */
+.profile-3 img {
+    position: absolute;
+    right: 0;
+    top: 0;
+
 }
 
 /* 리디자인 영역 */
@@ -217,23 +240,317 @@ body {
     display: block;
     background-color: #CDCBD9;
     padding-top: 9.5rem;
+    padding-bottom: 15rem;
 }
 
-.redesign .container {}
-
-.redsingn-left {
+.rede-wrap {
     position: relative;
+    display: block;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cdcbd9+35,b9afbc+35 */
+    background: #cdcbd9;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #cdcbd9 35%, #b9afbc 35%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #cdcbd9 35%, #b9afbc 35%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #cdcbd9 35%, #b9afbc 35%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdcbd9', endColorstr='#b9afbc', GradientType=1);
+    /* IE6-9 */
+
+
+}
+
+.redesign .container {
+    margin-top: 6rem;
+}
+
+.redesign .tit {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    display: block; */
+}
+
+
+.rede-left {
+    position: relative;
+    float: left;
     display: block;
     width: 49rem;
     height: 63rem;
-
 }
+
+.rede-left>h2 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.025;
+    line-height: 1;
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+}
+
+.rede-left p {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 0.025;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.rede-line-1 {
+    position: absolute;
+    right: 0;
+    bottom: 18.6rem;
+    display: block;
+    width: 25rem;
+    border-bottom: 0.2rem solid #b9afbc;
+}
+
+.rede-process-bt {
+    position: absolute;
+    left: 0;
+    bottom: 16rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.025;
+    line-height: 5.2rem;
+    border: 0.1rem solid #3D6A65;
+    background-color: #3D6A65;
+    padding: 0 8.5rem;
+}
+
+.rede-line-2 {
+    position: absolute;
+    right: 0;
+    bottom: 12.6rem;
+    display: block;
+    width: 25rem;
+    border-bottom: 0.2rem solid #b9afbc;
+}
+
+.rede-work-bt {
+    position: absolute;
+    left: 7rem;
+    bottom: 10rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #3D6A65;
+    letter-spacing: 0.025;
+    line-height: 5.2rem;
+    border: 0.1rem solid #dbd8e8;
+    background-color: #dbd8e8;
+    padding: 0 10rem;
+}
+
+
+/* 슬라이드로 처리 */
+.rede-right {
+    position: relative;
+    float: left;
+    display: block;
+    width: 103rem;
+    height: 63rem;
+}
+
+.up-bt {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 4rem;
+    border: none;
+    background-color: #b9afbc;
+}
+
+.down-bt {
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 4rem;
+    border: none;
+    background-color: #b9afbc;
+}
+
+.rede-right img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 
 /* 퍼블리싱 영역 */
 .publ {
     position: relative;
     display: block;
+    background-color: #cecbda;
+    padding-top: 5.5rem;
 }
+
+.publ-wrap {
+    position: relative;
+    display: block;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b9afbc+75,cdcbd9+75,cdcbd9+75 */
+    background: #b9afbc;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b9afbc', endColorstr='#cdcbd9', GradientType=1);
+    /* IE6-9 */
+
+
+
+}
+
+/* 수정 */
+.publ-tit {
+    position: absolute;
+    right: 19rem;
+    top: 0;
+    display: block;
+    font-size: 4.4rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1;
+    letter-spacing: 0.012rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+
+}
+
+.publ-wrap .container {
+    padding-top: 6rem;
+}
+
+.publ-up-bt {
+    position: absolute;
+    right: 30%;
+    top: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 4rem;
+    border: none;
+    background-color: #b9afbc;
+}
+
+.publ-down-bt {
+    position: absolute;
+    right: 30%;
+    bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 4rem;
+    border: none;
+    background-color: #b9afbc;
+}
+
+/* 슬라이드로 처리 */
+.publ-box-1 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 24rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.publ-box-left {
+    position: relative;
+    float: left;
+    display: block;
+    width: 71.3%;
+    background-color: skyblue;
+}
+
+.publ-box-left>img {
+    width: 100%;
+}
+
+.publ-box-right {
+    position: relative;
+    float: left;
+    display: block;
+    width: 28.7%;
+    height: 100%;
+}
+
+.publ-txt {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 0.0425;
+    line-height: 1;
+    padding-top: 5.2rem;
+}
+
+.publ-txt-1 {
+    position: relative;
+    width: 50%;
+    float: left;
+    text-align: end;
+    padding-right: 1rem;
+}
+
+.publ-txt-2 {
+    position: relative;
+    width: 50%;
+    float: left;
+    padding-left: 1rem;
+}
+
+.publ-txt p {
+    margin-bottom: 1.2rem;
+}
+
+.publ-txt b {
+    font-weight: 600;
+}
+
+.publ-bt {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-top: 3.2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.0425;
+    line-height: 1;
+}
+
+.publ-process-bt {
+    padding: 1.3rem 3.8rem;
+    background-color: #3D6A65;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.publ-git-bt {
+    padding: 1.3rem 3.3rem;
+    background-color: rgba(255, 255, 255, 0.52);
+    border-radius: 0.5rem;
+    color: #3D6A65;
+}
+
+.publ-work-bt {
+    padding: 1.3rem 3.6rem;
+    background-color: #3D6A65;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+
+
 
 /* 기타 영역 */
 .others {

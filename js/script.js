@@ -3,9 +3,31 @@ $(document).ready(function () {
     // 위로가기 기능
     $('.gotop').click(function () {
         $('html, body').animate({
-            scrollTop: 0
+            scrollTop: 0,
         });
     });
+    let gotop = $('.gotop');
+    $(window).scroll(function () {
+        let scrollbar = $(window).scrollTop();
+        if (scrollbar > 778) {
+            gotop.addClass('gotop-active');
+        } else {
+            gotop.removeClass('gotop-active');
+        }
+    });
+
+    // 주메뉴 관련 코드
+    let nav = $('.nav');
+    $(window).scroll(function () {
+        let scrollbar = $(window).scrollTop();
+        if (scrollbar > 778) {
+            nav.addClass('nav-fix');
+        } else {
+            nav.removeClass('nav-fix');
+        }
+    });
+
+
 
     // 퍼블리싱 슬라이드 영역 세로확인용
     new Swiper(".sw-publ", {

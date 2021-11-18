@@ -27,7 +27,13 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/script.js"></script>
 </head>
-<div class="wrap">
+
+
+<body>
+    <button class="gotop">
+        <img src="images/go-top.png" alt="">
+    </button>
+<div class="wrap" id="home">
     <!-- 비주얼 영역 -->
     <section class="visual clearfix">
         <div class="visual-left">
@@ -47,16 +53,17 @@
     <!-- gnb -->
     <nav class="nav">
         <ul class="menu clearfix">
-            <li><a href="#">profile</a></li>
-            <li><a href="#">web design</a></li>
-            <li><a href="#">web publishing</a></li>
-            <li><a href="#">others</a></li>
-            <li><a href="#">life&like</a></li>
+            <li><a href="#home" class="move">home</a></li>
+            <li><a href="#profile" class="move">profile</a></li>
+            <li><a href="#redesign" class="move">web design</a></li>
+            <li><a href="#publ" class="move">web publishing</a></li>
+            <li><a href="#others" class="move">others</a></li>
+            <li><a href="#life" class="move">life&like</a></li>
         </ul>
     </nav>
     <!-- // gnb -->
     <!-- 프로필 영역 -->
-    <section class="profile">
+    <section class="profile" id="profile">
         <h2 class="tit">ptofile</h2>
         <div class="container clearfix">
             <div class="profile-1">
@@ -73,7 +80,7 @@
     </section>
     <!-- // 프로필 영역 -->
     <!-- 리디자인 영역 -->
-    <section class="redesign">
+    <section class="redesign" id="redesign">
         <h2 class="tit">web redesign</h2>
         <div class="rede-wrap">
             <div class="container clearfix">
@@ -105,7 +112,7 @@
     </section>
     <!-- // 리디자인 영역 -->
     <!-- 퍼블리싱 영역 -->
-    <section class="publ">
+    <section class="publ" id="publ">
         <h2 class="publ-tit">web publishing</h2>
         <div class="publ-wrap">
             <div class="container clearfix">
@@ -115,110 +122,110 @@
                 <button class="publ-down-bt swiper-button-prev">
                     <i class="fas fa-chevron-down"></i>
                 </button>
-                <!-- <div class="publ-slide"> -->
-                <div class="swiper-container sw-publ">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="publ-box-1">
-                                <div class="publ-box-left clearfix">
-                                    <img src="images/publ-1.png" alt="">
-                                </div>
-                                <div class="publ-box-right">
-                                    <div class="publ-txt clearfix">
-                                        <div class="publ-txt-1">
-                                            <p><b>Project</b></p>
-                                            <p><b>Date</b></p>
-                                            <p><b>Program</b></p>
-                                        </div>
-                                        <div class="publ-txt-2">
-                                            <p>풀무원 녹즙1</p>
-                                            <p> 2021.09</p>
-                                            <p><i class="fab fa-html5"></i>
-                                                <i class="fab fa-css3-alt"></i>
-                                                <i class="fab fa-github-square"></i>
-                                                <i class="fab fa-js-square"></i>
-                                            </p>
-                                        </div>
+                <div class="publ-slide">
+                    <div class="swiper-container sw-publ">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="publ-box-1">
+                                    <div class="publ-box-left clearfix">
+                                        <img src="images/publ-1.png" alt="">
+                                    </div>
+                                    <div class="publ-box-right">
+                                        <div class="publ-txt clearfix">
+                                            <div class="publ-txt-1">
+                                                <p><b>Project</b></p>
+                                                <p><b>Date</b></p>
+                                                <p><b>Program</b></p>
+                                            </div>
+                                            <div class="publ-txt-2">
+                                                <p>풀무원 녹즙1</p>
+                                                <p> 2021.09</p>
+                                                <p><i class="fab fa-html5"></i>
+                                                    <i class="fab fa-css3-alt"></i>
+                                                    <i class="fab fa-github-square"></i>
+                                                    <i class="fab fa-js-square"></i>
+                                                </p>
+                                            </div>
 
-                                    </div>
-                                    <div class="publ-bt">
-                                        <a href="#" class="publ-process-bt">Work</a>
-                                        <a href="#" class="publ-git-bt">Git Hub</a>
-                                        <a href="#" class="publ-work-bt">Origin</a>
+                                        </div>
+                                        <div class="publ-bt">
+                                            <a href="#" class="publ-process-bt">Work</a>
+                                            <a href="#" class="publ-git-bt">Git Hub</a>
+                                            <a href="#" class="publ-work-bt">Origin</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="publ-box-1">
-                                <div class="publ-box-left clearfix">
-                                    <img src="images/publ-1.png" alt="">
-                                </div>
-                                <div class="publ-box-right">
-                                    <div class="publ-txt clearfix">
-                                        <div class="publ-txt-1">
-                                            <p><b>Project</b></p>
-                                            <p><b>Date</b></p>
-                                            <p><b>Program</b></p>
-                                        </div>
-                                        <div class="publ-txt-2">
-                                            <p>풀무원 녹즙2</p>
-                                            <p> 2021.09</p>
-                                            <p><i class="fab fa-html5"></i>
-                                                <i class="fab fa-css3-alt"></i>
-                                                <i class="fab fa-github-square"></i>
-                                                <i class="fab fa-js-square"></i>
-                                            </p>
-                                        </div>
+                            <div class="swiper-slide">
+                                <div class="publ-box-1">
+                                    <div class="publ-box-left clearfix">
+                                        <img src="images/publ-1.png" alt="">
                                     </div>
-                                    <div class="publ-bt">
-                                        <a href="#" class="publ-process-bt">Work</a>
-                                        <a href="#" class="publ-git-bt">Git Hub</a>
-                                        <a href="#" class="publ-work-bt">Origin</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="publ-box-1">
-                                <div class="publ-box-left clearfix">
-                                    <img src="images/publ-1.png" alt="">
-                                </div>
-                                <div class="publ-box-right">
-                                    <div class="publ-txt clearfix">
-                                        <div class="publ-txt-1">
-                                            <p><b>Project</b></p>
-                                            <p><b>Date</b></p>
-                                            <p><b>Program</b></p>
+                                    <div class="publ-box-right">
+                                        <div class="publ-txt clearfix">
+                                            <div class="publ-txt-1">
+                                                <p><b>Project</b></p>
+                                                <p><b>Date</b></p>
+                                                <p><b>Program</b></p>
+                                            </div>
+                                            <div class="publ-txt-2">
+                                                <p>풀무원 녹즙2</p>
+                                                <p> 2021.09</p>
+                                                <p><i class="fab fa-html5"></i>
+                                                    <i class="fab fa-css3-alt"></i>
+                                                    <i class="fab fa-github-square"></i>
+                                                    <i class="fab fa-js-square"></i>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="publ-txt-2">
-                                            <p>풀무원 녹즙3</p>
-                                            <p> 2021.09</p>
-                                            <p><i class="fab fa-html5"></i>
-                                                <i class="fab fa-css3-alt"></i>
-                                                <i class="fab fa-github-square"></i>
-                                                <i class="fab fa-js-square"></i>
-                                            </p>
+                                        <div class="publ-bt">
+                                            <a href="#" class="publ-process-bt">Work</a>
+                                            <a href="#" class="publ-git-bt">Git Hub</a>
+                                            <a href="#" class="publ-work-bt">Origin</a>
                                         </div>
-                                    </div>
-                                    <div class="publ-bt">
-                                        <a href="#" class="publ-process-bt">Work</a>
-                                        <a href="#" class="publ-git-bt">Git Hub</a>
-                                        <a href="#" class="publ-work-bt">Origin</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="swiper-slide">
+                                <div class="publ-box-1">
+                                    <div class="publ-box-left clearfix">
+                                        <img src="images/publ-1.png" alt="">
+                                    </div>
+                                    <div class="publ-box-right">
+                                        <div class="publ-txt clearfix">
+                                            <div class="publ-txt-1">
+                                                <p><b>Project</b></p>
+                                                <p><b>Date</b></p>
+                                                <p><b>Program</b></p>
+                                            </div>
+                                            <div class="publ-txt-2">
+                                                <p>풀무원 녹즙3</p>
+                                                <p> 2021.09</p>
+                                                <p><i class="fab fa-html5"></i>
+                                                    <i class="fab fa-css3-alt"></i>
+                                                    <i class="fab fa-github-square"></i>
+                                                    <i class="fab fa-js-square"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="publ-bt">
+                                            <a href="#" class="publ-process-bt">Work</a>
+                                            <a href="#" class="publ-git-bt">Git Hub</a>
+                                            <a href="#" class="publ-work-bt">Origin</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
     </section>
     <!-- // 퍼블리싱 영역 -->
     <!-- 기타 영역 -->
-    <section class="others">
+    <section class="others" id="others">
         <h2 class="tit">others</h2>
         <div class="container">
 
@@ -273,7 +280,7 @@
     </section>
     <!-- // 기타 영역 -->
     <!-- 라이프 영역 -->
-    <section class="life">
+    <section class="life" id="life">
         <h2 class="tit">LIFE&LIKE</h2>
         <div class="container clearfix">
             <div class="life-box">
@@ -304,7 +311,6 @@
     <!-- //  하단 영역 -->
 </div>
 
-<body>
 
 </body>
 

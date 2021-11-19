@@ -27,22 +27,100 @@ $(document).ready(function () {
         }
     });
 
+    // 부드럽게 위치 이동하는 코드
+    var moveEl = $('.move');
+    // 클릭시 해당위치로 부드럽게 이동한다.
+    $.each(moveEl, function () {
+
+        $(this).click(function (e) {
+            // href 를 일단 막아서 위치이동 못하게함.
+            e.preventDefault();
+            // 가야하는 곳의 위치를 파악한다.
+            var tg = $(this).attr('href');
+            var num;
+            // 혹시 #아이디 가 없다면
+            if (tg == '#') {
+                num = 0;
+            } else {
+                // 어느 만큼 이동해야 하는 지를 숫자로 파악한다.
+                num = $(tg).offset().top;
+            }
+
+            // 움직이자
+            $('html, body').stop().animate({
+                scrollTop: num
+            }, 500);
+        });
+    });
+
+    // 리디자인 슬라이드    
+    var rede_cont_box = $('.rede-cont-box');
+    rede_cont_box.eq(0).show();
+
+    var sw_rede = new Swiper('.sw-rede', {
+        loop:true,
+        direction: "vertical",
+        navigation: {
+          nextEl: ".sw-rede-up-bt",
+          prevEl: ".sw-rede-down-bt",
+        },
+    });
+
+    sw_rede.on('slideChange', function () {
+        rede_cont_box.hide();
+        rede_cont_box.eq(this.realIndex).show();
+    });
 
 
-    // 퍼블리싱 슬라이드 영역 세로확인용
+
+    // 퍼블리싱 슬라이드
     new Swiper(".sw-publ", {
         direction: "vertical",
         slidesPerView: 3,
-        spaceBetween: 10,
-        // 수정!!!!!!!!!!!!!!!!!!!!!!!
-        // loop: true,
+        spaceBetween: 5,
+        loop: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.publ-up-bt',
+            prevEl: '.publ-down-bt',
         },
 
     });
 
+    // 기타 디자인 슬라이드
+    var others_main_box = $('.others-main-box');
+    others_main_box.eq(0).show();
+    var others_box = $('.others-box');
+
+    var sw_others = new Swiper('.sw-others', {
+        direction: "vertical",
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop:true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+    $('.sw-others').mouseenter(function(){
+        sw_others.autoplay.stop();
+    });
+    $('.sw-others').mouseleave(function(){
+        sw_others.autoplay.start();
+    });
+
+    sw_others.on('slideChange', function () {
+        // others_main_box.hide();
+        // others_main_box.eq(this.realIndex).show();
+    });
+
+    $.each($('.others-box'), function(index, item){
+        $(this).click(function(){
+            console.log(index)
+            var temp = $(this).attr('data-other-box');
+            others_main_box.hide();
+            others_main_box.eq(temp).show();
+        });
+    });
 
     // // 퍼블리싱 슬라이드 영역 - 가로
     // // let appendNumber = 600;

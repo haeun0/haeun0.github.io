@@ -58,11 +58,11 @@ $(document).ready(function () {
     rede_cont_box.eq(0).show();
 
     var sw_rede = new Swiper('.sw-rede', {
-        loop:true,
+        loop: true,
         direction: "vertical",
         navigation: {
-          nextEl: ".sw-rede-up-bt",
-          prevEl: ".sw-rede-down-bt",
+            nextEl: ".sw-rede-up-bt",
+            prevEl: ".sw-rede-down-bt",
         },
     });
 
@@ -77,11 +77,11 @@ $(document).ready(function () {
     new Swiper(".sw-publ", {
         direction: "vertical",
         slidesPerView: 3,
-        spaceBetween: 5,
+        spaceBetween: 1,
         loop: true,
         navigation: {
-            nextEl: '.publ-up-bt',
-            prevEl: '.publ-down-bt',
+            nextEl: '.publ-down-bt',
+            prevEl: '.publ-UP-bt',
         },
 
     });
@@ -95,16 +95,16 @@ $(document).ready(function () {
         direction: "vertical",
         slidesPerView: 3,
         spaceBetween: 10,
-        loop:true,
+        loop: true,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
         },
     });
-    $('.sw-others').mouseenter(function(){
+    $('.sw-others').mouseenter(function () {
         sw_others.autoplay.stop();
     });
-    $('.sw-others').mouseleave(function(){
+    $('.sw-others').mouseleave(function () {
         sw_others.autoplay.start();
     });
 
@@ -113,8 +113,8 @@ $(document).ready(function () {
         // others_main_box.eq(this.realIndex).show();
     });
 
-    $.each($('.others-box'), function(index, item){
-        $(this).click(function(){
+    $.each($('.others-box'), function (index, item) {
+        $(this).click(function () {
             console.log(index)
             var temp = $(this).attr('data-other-box');
             others_main_box.hide();

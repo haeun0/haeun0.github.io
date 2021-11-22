@@ -80,8 +80,8 @@ $(document).ready(function () {
         spaceBetween: 1,
         loop: true,
         navigation: {
-            nextEl: '.publ-down-bt',
-            prevEl: '.publ-UP-bt',
+            nextEl: '.publ-up-bt',
+            prevEl: '.publ-down-bt',
         },
 
     });

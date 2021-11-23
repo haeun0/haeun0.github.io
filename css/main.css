@@ -44,17 +44,17 @@ html {
 
 /* SCROLL */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
 }
 
 /* 스크롤바의 width */
 ::-webkit-scrollbar-track {
-    background-color: #619ab4;
+    /* background-color: #619ab4; */
 }
 
 /* 스크롤바의 전체 배경색 */
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #1697bf, #62b7ac);
+    /* background: linear-gradient(to bottom, #1697bf, #62b7ac); */
 }
 
 /* 스크롤바 색 */
@@ -198,7 +198,7 @@ body {
     height: 9rem;
     text-align: center;
     background-color: rgba(185, 175, 188, 0.6);
-    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.15);
     z-index: 9999;
 }
 

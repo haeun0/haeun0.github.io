@@ -53,6 +53,12 @@ $(document).ready(function () {
         });
     });
 
+
+
+
+
+
+
     // 리디자인 슬라이드    
     var rede_cont_box = $('.rede-cont-box');
     rede_cont_box.eq(0).show();

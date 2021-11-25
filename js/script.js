@@ -1,57 +1,36 @@
+window.load = function () {};
 $(document).ready(function () {
     // 위로가기 기능
     $('.gotop').click(function () {
-
         $('html, body').animate({
-            scrollTop: 0
+            scrollTop: 0,
         });
-
+    });
+    let gotop = $('.gotop');
+    $(window).scroll(function () {
+        let scrollbar = $(window).scrollTop();
+        if (scrollbar > 778) {
+            gotop.addClass('gotop-active');
+        } else {
+            gotop.removeClass('gotop-active');
+        }
     });
 
-    // 리디자인 슬라이드
-    new Swiper(".sw-rede", {
-        slidesPerView: 4,
-        loop: true,
-    });
-
-    // 퍼블리싱 슬라이드
-    new Swiper(".sw-publ", {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        loop: true,
-    });
-
-    // 말 줄임 적용
-    $(".publ-desc").dotdotdot({
-        wrapper: 'div',
-        /*  콘텐트를 감쌀 요소. */
-        ellipsis: '... ',
-        /*  말줄임표를 뭘로 할지 */
-        wrap: 'word',
-        /*  자를 단위. 다음 옵션 중 하나 선택: 'word'/'letter'/'children' */
-        after: null,
-        /*  자르고 나서도 유지시킬 요소를 jQuery 선택자로 적는다. */
-        watch: false,
-        /*  윈도우가 리사이즈될 때 업데이트할 건지: true/'window' */
-        height: null,
-        /*  선택. max-height를 지정한다. 만약 null이면 알아서 잰다. */
-        tolerance: 0 /*  글이 넘치면 이만큼쯤 height를 늘린다 */
-    });
-
-    $(".rede-box-desc p").dotdotdot({
-        wrapper: 'div',
-        /*  콘텐트를 감쌀 요소. */
-        ellipsis: '... ',
-        /*  말줄임표를 뭘로 할지 */
-        wrap: 'word',
-        /*  자를 단위. 다음 옵션 중 하나 선택: 'word'/'letter'/'children' */
-        after: null,
-        /*  자르고 나서도 유지시킬 요소를 jQuery 선택자로 적는다. */
-        watch: false,
-        /*  윈도우가 리사이즈될 때 업데이트할 건지: true/'window' */
-        height: null,
-        /*  선택. max-height를 지정한다. 만약 null이면 알아서 잰다. */
-        tolerance: 0 /*  글이 넘치면 이만큼쯤 height를 늘린다 */
+    // 주메뉴 관련 코드
+    let nav = $('.nav');
+    let profile = $('.profile');
+    let profile_tit = $('.profile .tit');
+    $(window).scroll(function () {
+        let scrollbar = $(window).scrollTop();
+        if (scrollbar > 770) {
+            nav.addClass('nav-fix');
+            profile.addClass('profile-fix');
+            profile_tit.addClass('tit-fix');
+        } else {
+            nav.removeClass('nav-fix');
+            profile.removeClass('profile-fix');
+            profile_tit.removeClass('tit-fix');
+        }
     });
 
     // 부드럽게 위치 이동하는 코드
@@ -80,276 +59,229 @@ $(document).ready(function () {
         });
     });
 
-    // photoshop성취율
-    var photoshop = new ProgressBar.Line(skill_photoshop, {
-        strokeWidth: 4,
+
+    // possibility 
+    let possi_box = $('.possibox')
+
+
+
+
+
+
+
+    // 리디자인 슬라이드    
+    var rede_cont_box = $('.rede-cont-box');
+    rede_cont_box.eq(0).show();
+
+    var sw_rede = new Swiper('.sw-rede', {
+        loop: true,
+        direction: "vertical",
+        navigation: {
+            nextEl: ".sw-rede-up-bt",
+            prevEl: ".sw-rede-down-bt",
+        },
+    });
+
+    sw_rede.on('slideChange', function () {
+        rede_cont_box.hide();
+        rede_cont_box.eq(this.realIndex).show();
+    });
+
+
+
+    // 퍼블리싱 슬라이드
+    new Swiper(".sw-publ", {
+        direction: "vertical",
+        slidesPerView: 3,
+        spaceBetween: 1,
+        loop: true,
+        navigation: {
+            nextEl: '.publ-up-bt',
+            prevEl: '.publ-down-bt',
+        },
+
+    });
+
+    // 기타 디자인 슬라이드
+    var others_main_box = $('.others-main-box');
+    others_main_box.eq(0).show();
+    var others_box = $('.others-box');
+
+    var sw_others = new Swiper('.sw-others', {
+        direction: "vertical",
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+    $('.sw-others').mouseenter(function () {
+        sw_others.autoplay.stop();
+    });
+    $('.sw-others').mouseleave(function () {
+        sw_others.autoplay.start();
+    });
+
+    sw_others.on('slideChange', function () {
+        // others_main_box.hide();
+        // others_main_box.eq(this.realIndex).show();
+    });
+
+    $.each($('.others-box'), function (index, item) {
+        $(this).click(function () {
+            console.log(index)
+            var temp = $(this).attr('data-other-box');
+            others_main_box.hide();
+            others_main_box.eq(temp).show();
+        });
+    });
+
+    // // 퍼블리싱 슬라이드 영역 - 가로
+    // // let appendNumber = 600;
+    // // let prependNumber = 1;
+    // const swiper = new Swiper('.sw-publ', {
+    //     // direction: "vertical",
+    //     slidesPerView: 3,
+    //     // centeredSlides: true,
+    //     spaceBetween: 10,
+    //     // loop: true,
+    //     // pagination: {
+    //     //     el: '.swiper-pagination',
+    //     //     type: 'fraction',
+    //     // },
+    //     navigation: {
+    //         nextEl: '.swiper-button-next',
+    //         prevEl: '.swiper-button-prev',
+    //     },
+    //     // virtual: {
+    //     //     slides: (function () {
+    //     //         const slides = [];
+    //     //         for (var i = 0; i < 600; i += 1) {
+    //     //             slides.push('Slide ' + (i + 1));
+    //     //         }
+    //     //         return slides;
+    //     //     })(),
+    //     // },
+    // });
+
+    // document
+    //     .querySelector('.slide-1')
+    //     .addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         swiper.slideTo(0, 0);
+    //     });
+
+    // document
+    //     .querySelector('.slide-250')
+    //     .addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         swiper.slideTo(249, 0);
+    //     });
+
+    // document
+    //     .querySelector('.slide-500')
+    //     .addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         swiper.slideTo(499, 0);
+    //     });
+
+    // document
+    //     .querySelector('.prepend-2-slides')
+    //     .addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         swiper.virtual.prependSlide([
+    //             'Slide ' + --prependNumber,
+    //             'Slide ' + --prependNumber,
+    //         ]);
+    //     });
+
+    // document
+    //     .querySelector('.append-slide')
+    //     .addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         swiper.virtual.appendSlide('Slide ' + ++appendNumber);
+    //     });
+
+    // 기타영역 슬라이드
+    var swiper = new Swiper(".sw-others", {
+        slidesPerView: 4,
+        grid: {
+            rows: 2,
+        },
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    // skil 
+    var bar_html = new ProgressBar.Circle(html, {
+        strokeWidth: 6,
         easing: 'easeInOut',
         duration: 1400,
-        color: '#FF0000',
+        color: '#5d4b63',
         trailColor: '#eee',
         trailWidth: 1,
-        svgStyle: {
-            width: '100%',
-            height: '100%'
-        },
-        from: {
-            color: '#FF0000'
-        },
-        to: {
-            color: '#FF0000'
-        },
-        step: (state, bar) => {
-            bar.path.setAttribute('stroke', state.color);
-        }
+        svgStyle: null
     });
 
 
 
-    // illust 성취율
-    var illust = new ProgressBar.Line(skill_illust, {
-        strokeWidth: 4,
+    var bar_css = new ProgressBar.Circle(css, {
+        strokeWidth: 6,
         easing: 'easeInOut',
         duration: 1400,
-        color: '#00ff00',
+        color: '#a38182',
         trailColor: '#eee',
         trailWidth: 1,
-        svgStyle: {
-            width: '100%',
-            height: '100%'
-        },
-        from: {
-            color: '#00ff00'
-        },
-        to: {
-            color: '#00ff00'
-        },
-        step: (state, bar) => {
-            bar.path.setAttribute('stroke', state.color);
-        }
+        svgStyle: null
     });
 
 
-    // xd 성취율
-    var xd = new ProgressBar.Line(skill_xd, {
-        strokeWidth: 4,
+
+    var bar_photoshop = new ProgressBar.Circle(photoshop, {
+        strokeWidth: 6,
         easing: 'easeInOut',
         duration: 1400,
-        color: '#0000ff',
+        color: '#cecbda',
         trailColor: '#eee',
         trailWidth: 1,
-        svgStyle: {
-            width: '100%',
-            height: '100%'
-        },
-        from: {
-            color: '#0000ff'
-        },
-        to: {
-            color: '#0000ff'
-        },
-        step: (state, bar) => {
-            bar.path.setAttribute('stroke', state.color);
-        }
+        svgStyle: null
     });
 
-    // html 성취율
-    var html = new ProgressBar.Circle(skill_html, {
-        color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 4,
-        trailWidth: 1,
+
+
+    var bar_illust = new ProgressBar.Circle(illust, {
+        strokeWidth: 6,
         easing: 'easeInOut',
         duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: {
-            color: '#aaa',
-            width: 1
-        },
-        to: {
-            color: '#333',
-            width: 4
-        },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
-
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value);
-            }
-
-        }
-    });
-    html.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    html.text.style.fontSize = '2rem';
-
-    // css 성취율
-    var css = new ProgressBar.Circle(skill_css, {
-        color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 4,
+        color: '#d74d63',
+        trailColor: '#eee',
         trailWidth: 1,
-        easing: 'easeInOut',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: {
-            color: '#aaa',
-            width: 1
-        },
-        to: {
-            color: '#333',
-            width: 4
-        },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
-
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value);
-            }
-
-        }
+        svgStyle: null
     });
-    css.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    css.text.style.fontSize = '2rem';
-
-    // jquery 성취율
-    var jquery = new ProgressBar.Circle(skill_jquery, {
-        color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 4,
-        trailWidth: 1,
-        easing: 'easeInOut',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: {
-            color: '#aaa',
-            width: 1
-        },
-        to: {
-            color: '#333',
-            width: 4
-        },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
-
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value);
-            }
-
-        }
-    });
-    jquery.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    jquery.text.style.fontSize = '2rem';
-
-    // oa 성취율
-    var oa = new ProgressBar.Circle(skill_oa, {
-        color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 4,
-        trailWidth: 1,
-        easing: 'easeInOut',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: {
-            color: '#aaa',
-            width: 1
-        },
-        to: {
-            color: '#333',
-            width: 4
-        },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
-
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value);
-            }
-
-        }
-    });
-    oa.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    oa.text.style.fontSize = '2rem';
 
 
-    // photoshop.animate(0.8); 
-    // illust.animate(0.95); 
-    // xd.animate(0.83); 
-    // html.animate(1.0); 
-    // css.animate(0.9); 
-    // jquery.animate(0.75); 
-    // oa.animate(0.88); 
 
-    // 스크롤을 했을 때 모션 시작
-    var sc_y = $(window).scrollTop();
+
+    // 스크롤바의 위치를 체크한다.
     $(window).scroll(function () {
-        sc_y = $(window).scrollTop();
-        console.log(sc_y);
+        // 스크롤바의 위치 값
+        var scY = $(window).scrollTop();
+        console.log(scY);
 
-        if (sc_y >= 910) {
-            photoshop.animate(0.8);
-            illust.animate(0.95);
-            xd.animate(0.83);
-            html.animate(1.0);
-            css.animate(0.9);
-            jquery.animate(0.75);
-            oa.animate(0.88);
+        if (scY > 700) {
+            // 애니메이션 실행
+            bar_html.animate(0.9); // Number from 0.0 to 1.0
+            bar_css.animate(0.88); // Number from 0.0 to 1.0
+            bar_photoshop.animate(0.95); // Number from 0.0 to 1.0
+            bar_illust.animate(0.85); // Number from 0.0 to 1.0
         }
+
     });
 
-    $('.count').counterUp({
-        delay: 10,
-        time: 2000
-    });
-
-    // 스크롤시 애니메이션 
-    $('.life-img').waypoint(function (dir) {
-        if (dir == "down") {
-            $('.life-img').addClass('life-img-active');
-        } else {
-            $('.life-img').removeClass('life-img-active');
-        }
-    }, {
-        offset: '100%'
-    });
-
-    $(".etc-sample").niceScroll({
-        cursorwidth: "20px",
-        cursoropacitymax: 0.5,
-        boxzoom: true,
-    });
 
 });
-
-window.onload = function () {
-    AOS.init();
-}

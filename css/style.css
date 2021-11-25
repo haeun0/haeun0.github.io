@@ -1,0 +1,488 @@
+@charset 'utf-8';
+@import url('notosanskr/NotoSansKR.css');
+@import url('font/ssangmundongb.css');
+@import url('font2/font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-style: none;
+}
+
+a {
+    font-family: 'Typo_SsangmunDong_B';
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h2 {
+    font-family: 'ssangmundongb';
+    font-size: 6rem;
+    text-align: center;
+}
+
+html {
+    scrollbar-3dLight-Color: #efefef;
+    scrollbar-arrow-color: #dfdfdf;
+    scrollbar-base-color: #efefef;
+    scrollbar-Face-Color: #dfdfdf;
+    scrollbar-Track-Color: #efefef;
+    scrollbar-DarkShadow-Color: #efefef;
+    scrollbar-Highlight-Color: #efefef;
+    scrollbar-Shadow-Color: #efefef;
+    -ms-overflow-style: none;
+    overflow: auto;
+}
+
+/* SCROLL */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* 스크롤바의 width */
+::-webkit-scrollbar-track {
+    background-color: #619ab4;
+}
+
+/* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #1697bf, #62b7ac);
+}
+
+/* 스크롤바 색 */
+::-webkit-scrollbar-button {
+    /* display: none; */
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Noto Sans KR', 'ssangmundongb';
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -0.0425rem;
+    color: #000;
+    line-height: 1.4;
+}
+
+.clearfix:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    position: relative;
+    display: block;
+    width: 130rem;
+    margin: 0 auto;
+}
+
+.gotop {
+    position: fixed;
+    /* right: 5rem; */
+    left: calc(50% + 65rem);
+    transform: translateX(-50%);
+    bottom: 15rem;
+    width: 5rem;
+    height: 5rem;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 5rem;
+    z-index: 99;
+}
+
+.gotop:hover {
+    background-color: #f00;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
+/* header */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.header .container {
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.gnb {
+    position: relative;
+    overflow: hidden;
+}
+
+.gnb>li {
+    float: left;
+    padding: 2rem 1rem;
+}
+
+.gnb>li>a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+/* visual */
+.visual {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 94rem;
+    overflow: hidden;
+    background-color: #7f69aa;
+}
+
+.hello {
+    position: absolute;
+    left: 50%;
+    top: 5rem;
+    transform: translateX(-50%);
+}
+
+.my {
+    position: absolute;
+    left: 50%;
+    top: 25rem;
+    transform: translateX(-50%);
+}
+
+/* profile */
+.prof {
+    position: relative;
+    display: block;
+    height: 94rem;
+    overflow: hidden;
+}
+
+.prof .container {
+    height: 100%;
+    padding: 5rem 0;
+}
+
+.prof-left {
+    display: block;
+    width: 61rem;
+}
+
+.prof-right {
+    display: block;
+    width: 43rem;
+}
+
+.skill-list {
+    position: relative;
+    display: block;
+}
+
+.skill-list>li {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.skill-cate {
+    display: block;
+    width: 15%;
+    float: left;
+}
+
+.skill-level {
+    display: block;
+    width: 85%;
+    float: left;
+}
+
+
+/* photoshop 성취율 */
+#skill_photoshop {
+    width: 20rem;
+    height: 1rem;
+}
+
+/* illust 성취율 */
+#skill_illust {
+    width: 20rem;
+    height: 1rem;
+}
+
+/* XD 성취율 */
+#skill_xd {
+    width: 20rem;
+    height: 1rem;
+}
+
+/* html 성취율 */
+#skill_html {
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+}
+
+#skill_css {
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+}
+
+#skill_jquery {
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+}
+
+#skill_oa {
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+}
+
+
+
+/* rede */
+.rede {
+    position: relative;
+    display: block;
+    height: 94rem;
+    overflow: hidden;
+}
+
+.rede .container {
+    height: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.sw-rede {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+
+.rede-box {
+    position: relative;
+    display: block;
+    height: 90%;
+    text-align: center;
+}
+
+.rede-box-desc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    color: #fff;
+    padding: 5rem;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.rede-box:hover .rede-box-desc {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.rede-box-desc h3 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.rede-box-desc p {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    height: 7rem;
+}
+
+.rede-box-desc ul {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 5rem;
+}
+
+.rede-box-bt {
+    position: absolute;
+    left: 0;
+    bottom: 4rem;
+    width: 100%;
+    text-align: center;
+}
+
+.rede-box-bt a {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #000;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+
+
+/* publ */
+.publ {
+    position: relative;
+    display: block;
+    height: 94rem;
+    overflow: hidden;
+}
+
+.publ .container {
+    height: 100%;
+}
+
+
+.publ-slide {
+    position: relative;
+    display: block;
+    margin-top: 5rem;
+}
+
+
+.puble-box {
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.puble-box>img {}
+
+.publ-desc {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    height: 7rem;
+    background-color: green;
+}
+
+.publ-tech {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.publ-link {}
+
+.publ-link a {
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+
+
+/* etc */
+.etc {
+    position: relative;
+    display: block;
+    height: 94rem;
+    overflow: hidden;
+}
+
+.etc-wrap {
+    position: relative;
+    display: block;
+    margin-top: 5rem;
+}
+
+.etc-wrap ul {}
+
+.etc-wrap ul>li {
+    width: 25%;
+    float: left;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.etc-sample {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/* life */
+.life {
+    position: relative;
+    display: block;
+    height: 94rem;
+    overflow: hidden;
+}
+
+.life .container {
+    height: 100%;
+}
+
+.life-img {
+    opacity: 0;
+    transform: translateY(100%) rotate(180deg);
+    transition: opacity 1.0s, transform 1.0s;
+}
+
+.life-img-active {
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+}
+
+/* contact */
+.contact {
+    position: relative;
+    display: block;
+    text-align: center;
+}

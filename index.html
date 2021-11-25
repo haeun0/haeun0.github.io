@@ -4,605 +4,447 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="images/favicon_180.png">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>portfolio</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>개인포트폴리오</title>
     <script src="js/jquery.min.js"></script>
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
     <![endif]-->
-    <script src="js/prefixfree.min.js"></script>
-    <script src="js/respond.min.js"></script>
-    <link rel="stylesheet" href="js/swiper/swiper.min.css">
-    <script src="js/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <!-- aos 관련 코드 -->
     <link href="js/aos/aos.css" rel="stylesheet">
     <script src="js/aos/aos.js"></script>
+    <!-- lightbox2 참조 -->
+    <link rel="stylesheet" href="js/lightbox2/css/lightbox.css">
+    <script src="js/lightbox2/js/lightbox.js"></script>
+    <!-- swiper  참조 -->
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <script src="js/swiper/swiper.min.js"></script>
+
+    <!-- dotdotdot 참조 -->
+    <script src="js/jquery.dotdotdot.min.js"></script>
+
     <!-- Progressbar 관련 -->
     <script src="js/progressbar/progressbar.js"></script>
+
+    <!-- waypoint -->
+    <script src="js/counterup/waypoints.min.js"></script>
+
+    <!-- counterup -->
+    <script src="js/counterup/jquery.counterup.js"></script>
+
+    <!-- nicescroll.js -->
+    <script src="js/jquery.nicescroll.min.js"></script>
+
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- 딩벳폰트 참조 -->
+    <link rel="stylesheet" href="css/fontello/css/animation.css">
+    <link rel="stylesheet" href="css/fontello/css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
 
-
 <body>
     <button class="gotop">
-        <img src="images/go-top.png" alt="">
+        <i class="fas fa-arrow-up"></i>
     </button>
     <div class="wrap" id="home">
-        <!-- 비주얼 영역 -->
-        <section class="visual clearfix">
-            <div class="visual-left">
-                <div class="visual-tit">
-                    <h2>Protfolio</h2>
-                    <img src="images/logo.png" alt="logo">
-                    <p>Jang Ha-eun</p>
-                </div>
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <a href="#home" class="logo move">Home</a>
+                <ul class="gnb">
+                    <li><i class="icon-link-ext-alt"></i><a href="#profile" class="move">profile</a></li>
+                    <li><i class="icon-link-ext-alt"></i><a href="#redesign" class="move">redesign</a></li>
+                    <li><i class="icon-link-ext-alt"></i><a href="#publishing" class="move">publishing</a></li>
+                    <li><i class="icon-link-ext-alt"></i><a href="#etc" class="move">etc</a></li>
+                    <li><i class="icon-link-ext-alt"></i><a href="#life" class="move">life</a></li>
+                    <li><i class="icon-link-ext-alt"></i><a href="#contact" class="move">contact</a></li>
+                    <li><i class="icon-link-ext-alt"></i><a href="#" class="move">포트폴리오 다운로드</a></li>
+                </ul>
             </div>
-            <div class="visual-right">
-                <div class="visual-img">
-                    <img src="images/visual-1.png" alt="photo">
+        </header>
+        <!-- // header -->
+
+        <!-- visual -->
+        <section class="visual">
+            <img src="images/hello.png" alt="hello" class="hello" data-aos="fade-right">
+            <img src="images/my.png" alt="my" class="my" data-aos="fade-up">
+        </section>
+        <!-- // visual -->
+
+        <!-- profile -->
+        <section class="prof" id="profile">
+            <div class="container clearfix">
+                <div class="prof-left left">
+                    <img src="images/pro_1.png" alt="프로필" data-aos="fade-right" data-aos-delay="500"
+                        data-aos-duration="1000" data-aos-easing="linear">
+                    <img src="images/pro_2.png" alt="프로필" data-aos="fade-right" data-aos-delay="800"
+                        data-aos-duration="1500" data-aos-easing="ease-in">
+                    <img src="images/pro_3.png" alt="프로필" data-aos="fade-right" data-aos-delay="1100"
+                        data-aos-duration="500" data-aos-easing="ease-out">
+                </div>
+                <div class="prof-right right">
+                    <img src="images/pro_4.png" alt="프로필">
+                    <img src="images/pro_5.png" alt="프로필">
+                    <img src="images/pro_6.png" alt="프로필">
+                    <!-- <img src="images/pro_7.png" alt="프로필"> -->
+                    <div class="prof-skill">
+                        <h3>skill</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <span class="skill-cate">Photoshop</span>
+                                <div class="skill-level">
+                                    <!-- photoshop 성취율 -->
+                                    <div id="skill_photoshop"></div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="skill-cate">Illustratior</span>
+                                <div class="skill-level">
+                                    <!-- illust 성취율 -->
+                                    <div id="skill_illust"></div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="skill-cate">Adobe XD</span>
+                                <div class="skill-level">
+                                    <!-- XD 성취율 -->
+                                    <div id="skill_xd"></div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="skill-cate">HTML</span>
+                                <div class="skill-level">
+                                    <!-- html 성취율 -->
+                                    <div id="skill_html"></div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="skill-cate">CSS</span>
+                                <div class="skill-level">
+                                    <!-- css 성취율 -->
+                                    <div id="skill_css"></div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="skill-cate">jQuery</span>
+                                <div class="skill-level">
+                                    <div id="skill_jquery"></div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="skill-cate">OA</span>
+                                <div class="skill-level">
+                                    <div id="skill_oa"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="prof-mbti">
+                    MBTI 화면 넣기
                 </div>
             </div>
         </section>
-        <!-- // 비주얼 영역 -->
-        <!-- gnb -->
-        <nav class="nav">
-            <ul class="menu clearfix">
-                <li><a href="#home" class="move">home</a></li>
-                <li><a href="#profile" class="move">profile</a></li>
-                <li><a href="#redesign" class="move">web design</a></li>
-                <li><a href="#publ" class="move">web publishing</a></li>
-                <li><a href="#others" class="move">others</a></li>
-                <li><a href="#life" class="move">life&like</a></li>
-            </ul>
-        </nav>
-        <!-- // gnb -->
-        <!-- 프로필 영역 -->
-        <section class="profile" id="profile">
-            <h2 class="tit">ptofile</h2>
+        <!-- // profile -->
+
+        <!-- redesing -->
+        <section class="rede" id="redesign">
             <div class="container clearfix">
-                <div class="profile-1">
-                    <img src="images/profile-1.png" alt="">
+                <h2><i class="icon-user"></i>Re-Design<span class="count">리디자인 총 개수(1,234)</span></h2>
+
+                <div class="swiper-container sw-rede">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="rede-box">
+                                <img src="images/rede_1.png" alt="">
+                                <div class="rede-box-desc">
+                                    <h3>casper 사이트</h3>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem saepe enim nulla
+                                        autem
+                                        nihil
+                                        delectus assumenda iusto fugiat quae velit, consectetur ad neque odit tenetur
+                                        atque
+                                        eius
+                                        architecto hic debitis!
+                                    </p>
+                                    <ul>
+                                        <li>Photoshop</li>
+                                        <li>Illustratior</li>
+                                        <li>5일작업</li>
+                                    </ul>
+                                </div>
+                                <div class="rede-box-bt">
+                                    <a href="work/redesign1/process.html" target="_blank"><i
+                                            class="fas fa-layer-group"></i>Process</a>
+                                    <a href="work/redesign1/design.html" target="_blank"><i
+                                            class="fas fa-clone"></i>Work</a>
+                                    <a href="https://casper.hyundai.com/" target="_blank">Origin</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rede-box">
+                                <img src="images/rede_1.png" alt="">
+                                <div class="rede-box-desc">
+                                    <h3>STX 건설</h3>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem saepe enim nulla
+                                        autem
+                                        nihil
+                                        delectus assumenda iusto fugiat quae velit, consectetur ad neque odit tenetur
+                                        atque
+                                        eius
+                                        architecto hic debitis!
+                                    </p>
+                                    <ul>
+                                        <li>Photoshop</li>
+                                        <li>Illustratior</li>
+                                        <li>5일작업</li>
+                                    </ul>
+                                </div>
+                                <div class="rede-box-bt">
+                                    <a href="work/redesign2/process.html" target="_blank"><i
+                                            class="fas fa-layer-group"></i>Process</a>
+                                    <a href="work/redesign2/design.html" target="_blank"><i
+                                            class="fas fa-clone"></i>Work</a>
+                                    <a href="https://casper.hyundai.com/" target="_blank">Origin</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rede-box">
+                                <img src="images/rede_1.png" alt="">
+                                <div class="rede-box-desc">
+                                    <h3>STX 건설</h3>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem saepe enim nulla
+                                        autem
+                                        nihil
+                                        delectus assumenda iusto fugiat quae velit, consectetur ad neque odit tenetur
+                                        atque
+                                        eius
+                                        architecto hic debitis!
+                                    </p>
+                                    <ul>
+                                        <li>Photoshop</li>
+                                        <li>Illustratior</li>
+                                        <li>5일작업</li>
+                                    </ul>
+                                </div>
+                                <div class="rede-box-bt">
+                                    <a href="work/redesign3/process.html" target="_blank"><i
+                                            class="fas fa-layer-group"></i>Process</a>
+                                    <a href="work/redesign3/design.html" target="_blank"><i
+                                            class="fas fa-clone"></i>Work</a>
+                                    <a href="#" target="_blank">Origin</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rede-box">
+                                <img src="images/rede_1.png" alt="">
+                                <div class="rede-box-desc">
+                                    <h3>STX 건설</h3>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem saepe enim nulla
+                                        autem
+                                        nihil
+                                        delectus assumenda iusto fugiat quae velit, consectetur ad neque odit tenetur
+                                        atque
+                                        eius
+                                        architecto hic debitis!
+                                    </p>
+                                    <ul>
+                                        <li>Photoshop</li>
+                                        <li>Illustratior</li>
+                                        <li>5일작업</li>
+                                    </ul>
+                                </div>
+                                <div class="rede-box-bt">
+                                    <a href="work/redesign4/process.html" target="_blank"><i
+                                            class="fas fa-layer-group"></i>Process</a>
+                                    <a href="work/redesign4/design.html" target="_blank"><i
+                                            class="fas fa-clone"></i>Work</a>
+                                    <a href="#" target="_blank">Origin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="profile-2">
-                    <img src="images/profile-2.png" alt="">
+
+            </div>
+
+        </section>
+        <!-- // redesing -->
+
+        <!-- publshing -->
+        <section class="publ" id="publishing">
+            <div class="container">
+                <h2><i class="icon-user"></i> publshing</h2>
+                <div class="publ-slide">
+
+                    <div class="swiper-container sw-publ">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="puble-box">
+                                    <img src="images/pub_1.png" alt="STX건설">
+                                    <p class="publ-desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quas laborum
+                                        dolor soluta
+                                        culpa vero consequatur, nihil unde recusandae magni ex quia. Ex accusamus, nisi
+                                        aut quos
+                                        voluptas repudiandae amet?
+                                    </p>
+                                    <p class="publ-tech">
+                                        <i class="fab fa-html5"></i>
+                                        <i class="fab fa-js"></i>
+                                        <i class="fab fa-css3-alt"></i>
+                                        <i class="fab fa-github"></i>
+                                    </p>
+                                    <p class="publ-link">
+                                        <a href="work/STXconst/index.html" target="_blank">work</a>
+                                        <a href="http://GitHub.com/haeun0" target="_blank">GitHub</a>
+                                        <a href="http://STXconst.co.kr" target="_blank">origin</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="puble-box">
+                                    <img src="images/pub_2.png" alt="풀무원 녹즙">
+                                    <p class="publ-desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quas laborum
+                                        dolor soluta
+                                        culpa vero consequatur, nihil unde recusandae magni ex quia. Ex accusamus, nisi
+                                        aut quos
+                                        voluptas repudiandae amet?
+                                    </p>
+                                    <p class="publ-tech">
+                                        <i class="fab fa-html5"></i>
+                                        <i class="fab fa-js"></i>
+                                        <i class="fab fa-css3-alt"></i>
+                                        <i class="fab fa-github"></i>
+                                    </p>
+                                    <p class="publ-link">
+                                        <a href="work/greenjuice/index.html" target="_blank">work</a>
+                                        <a href="http://GitHub.com/haeun0" target="_blank">GitHub</a>
+                                        <a href="https://greenjuice.pulmuone.com/" target="_blank">origin</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="puble-box">
+                                    <img src="images/pub_3.png" alt="한살림 장보기">
+                                    <p class="publ-desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quas laborum
+                                        dolor soluta
+                                        culpa vero consequatur, nihil unde recusandae magni ex quia. Ex accusamus, nisi
+                                        aut quos
+                                        voluptas repudiandae amet?
+                                    </p>
+                                    <p class="publ-tech">
+                                        <i class="fab fa-html5"></i>
+                                        <i class="fab fa-js"></i>
+                                        <i class="fab fa-css3-alt"></i>
+                                        <i class="fab fa-github"></i>
+                                    </p>
+                                    <p class="publ-link">
+                                        <a href="work/hansalim/indes.html" target="_blank">work</a>
+                                        <a href="http://GitHub.com/haeun0" target="_blank">GitHub</a>
+                                        <a href="https://shop.hansalim.or.kr/" target="_blank">origin</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="puble-box">
+                                    <img src="images/pub_4.png" alt="풀무원 샘물">
+                                    <p class="publ-desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quas laborum
+                                        dolor soluta
+                                        culpa vero consequatur, nihil unde recusandae magni ex quia. Ex accusamus, nisi
+                                        aut quos
+                                        voluptas repudiandae amet?
+                                    </p>
+                                    <p class="publ-tech">
+                                        <i class="fab fa-html5"></i>
+                                        <i class="fab fa-js"></i>
+                                        <i class="fab fa-css3-alt"></i>
+                                        <i class="fab fa-github"></i>
+                                    </p>
+                                    <p class="publ-link">
+                                        <a href="#" target="_blank">work</a>
+                                        <a href="http://GitHub.com/haeun0" target="_blank">GitHub</a>
+                                        <a href="https://www.pulmuonewater.com/" target="_blank">origin</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="profile-3">
-                    <!-- <img src="images/profile-3.png" alt=""> -->
-                    <ul class="skill-list">
-                        <li>
-                            <div id="html" class="skill"></div>
-                            <span></span>
-                            <p>HTML</p>
-                        </li>
-                        <li>
-                            <div id="css" class="skill"></div>
-                            <span></span>
-                            <p>CSS</p>
-                        </li>
-                        <li>
-                            <div id="photoshop" class="skill"></div>
-                            <span></span>
-                            <p>Photoshop</p>
-                        </li>
-                        <li>
-                            <div id="illust" class="skill"></div>
-                            <span></span>
-                            <p>illust</p>
-                        </li>
-                        <li class="skill-plus">
-                            <p>js</p>
-                            <span></span>
-                            <p>jq</p>
-                        </li>
-                        <li class="skill-plus">
-                            <p>Git</p>
-                            <span></span>
-                            <p>Visual Studio
-                                Code</p>
-                        </li>
+            </div>
+        </section>
+        <!-- //publshing -->
+
+        <!-- etc -->
+        <section class="etc" id="etc">
+            <div class="container">
+                <h2><i class="icon-user"></i> Etc Design</h2>
+                <div class="etc-wrap">
+                    <ul class="clearfix">
+                        <li><a href="work/etc0/etc0.jpg" target="_blank" data-lightbox="photoshop"
+                                data-title="랍스터 이벤트"><img src="images/etc_0.jpg" alt="작품1"></a></li>
+                        <li><a href="work/etc1/etc1.jpg" target="_blank" data-lightbox="illust"
+                                data-title="every pet"><img src="images/etc_1.jpg" alt="작품2"></a></li>
+                        <li><a href="work/etc2/etc2.jpg" target="_blank" data-lightbox="illust"
+                                data-title="Unique Live MCN"><img src="images/etc_2.jpg" alt="작품3"></a></li>
+                        <li><a href="work/etc3/etc3.jpg" target="_blank" data-lightbox="photoshop"
+                                data-title="More"><img src="images/etc_3.jpg" alt="작품4"></a></li>
+                        <li><a href="work/etc4/etc4.jpg" target="_blank" data-lightbox="photoshop"
+                                data-title="Materials"><img src="images/etc_4.jpg" alt="작품5"></a></li>
+
                     </ul>
                 </div>
+                <div class="etc-sample">
+                    <img src="work/etc0/etc0.jpg" alt="">
+                </div>
             </div>
-
         </section>
-        <!-- // 프로필 영역 -->
-        <!-- possibility 영역 -->
-        <section class="possi">
-            <h2 class="tit">possibility</h2>
+        <!-- // etc -->
+
+        <!-- life -->
+        <section class=" life" id="life">
             <div class="container">
-                <span class="possi-sub-tit">단점을 극복하고 장점으로 바꾼다!</span>
-                <div class="possi-box clearfix">
-                    <div class="possi-icon">
-                        <i class="fas fa-cat"></i>
-                     </div>
-                    <div class="possi-txt">
-                        <p>낯가림 극복 이해력 향상</p>
-                        <span>사람을 도와주고 싶어도 낯을 가려서 선뜻 다가가지 못하는 성격을 바꾸기 위해<br>
-                            여러 활동을 하면서 먼저 다가가 말을 걸며 사람의 눈을 보면서 대화할 수 있게 되었고,<br>
-                            성격이 변하면서 느꼈던 점 덕분에 다름을 이해하고 사람과의 갈등을 유하게 넘길 수 있는 사람이 되었습니다.</span>
-                    </div>
-                </div>
-
-                <div class="possi-box-left">
-                    <div class="possi-txt-left">
-                        <p>소심하지만 세심하기에 디테일할 수 있다.</p>
-                        <span>큰 그림을 그리는 것도 중요하지만 큰 그림을 채워줄 세밀한 그림이 필요합니다.<br>
-                            저의 세심한 성격으로 여러 상황들을 교려하고 그에 맞는 디테일들을 추가하여<br>
-                            더 탄탄하고 멋진 그림이 될 수 있도록 서포팅 하는 사람이 되겠습니다.</span>
-                    </div>
-                    <div class="possi-icon-left"><i class="fas fa-cogs"></i>
-                    </div>
-                </div>
-
-                <div class="possi-box possi-3 clearfix">
-                    <div class="possi-icon">
-                        <i class="far fa-laugh-squint"></i>
-                    </div>
-                    <div class="possi-txt">
-                        <p>새로운 도전</p>
-                        <span>새로운 도전을 하는 건 어렵고 스트레스를 받지만<br>
-                            도전을 하면서 알게 되는 지식과 해결하였을 때의 즐거움이 더 큰 덕분에 <br>
-                            그 힘으로 새로운 도전을 하게 됩니다.<br>
-                            지치지 않는 모습과 낙천적인 성격으로 팀의 활력소가 되겠습니다.</span>
-                    </div>
-                </div>
+                <h2><i class="icon-user"></i> Life</h2>
+                <img src="images/life_4.jpg" alt="" class="life-img">
             </div>
         </section>
-        <!-- // possibility 영역 -->
-        <!-- 리디자인 영역 -->
-        <section class="redesign" id="redesign">
-            <h2 class="tit">web redesign</h2>
-            <div class="rede-wrap">
-                <div class="container clearfix">
-                    <div class="rede-left">
-                        <div class="rede-cont-box">
-                            <h2>EDIYA COFFEE1</h2>
-                            <p>이디야의 친숙하고 깔끔한 이미지를<br>
-                                중점으로 텍스트 보다 사진과 영상위주로<br>
-                                읽히기 편하도록 리디자인하였습니다. </p>
-                            <p>
-                                제작기간 - 21.10<br>
-                                사용프로그램 - Photosop/Illustrator
-                            </p>
-                            <span class="rede-line-1"></span>
-                            <a href="#" class="rede-process-bt">Process</a>
-                            <span class="rede-line-2"></span>
-                            <a href="#" class="rede-work-bt">Work</a>
-                        </div>
-                        <div class="rede-cont-box">
-                            <h2>EDIYA COFFEE2</h2>
-                            <p>이디야의 친숙하고 깔끔한 이미지를<br>
-                                중점으로 텍스트 보다 사진과 영상위주로<br>
-                                읽히기 편하도록 리디자인하였습니다. </p>
-                            <p>
-                                제작기간 - 21.10<br>
-                                사용프로그램 - Photosop/Illustrator
-                            </p>
-                            <span class="rede-line-1"></span>
-                            <a href="#" class="rede-process-bt">Process</a>
-                            <span class="rede-line-2"></span>
-                            <a href="#" class="rede-work-bt">Work</a>
-                        </div>
-                        <div class="rede-cont-box">
-                            <h2>EDIYA COFFEE3</h2>
-                            <p>이디야의 친숙하고 깔끔한 이미지를<br>
-                                중점으로 텍스트 보다 사진과 영상위주로<br>
-                                읽히기 편하도록 리디자인하였습니다. </p>
-                            <p>
-                                제작기간 - 21.10<br>
-                                사용프로그램 - Photosop/Illustrator
-                            </p>
-                            <span class="rede-line-1"></span>
-                            <a href="#" class="rede-process-bt">Process</a>
-                            <span class="rede-line-2"></span>
-                            <a href="#" class="rede-work-bt">Work</a>
-                        </div>
-                    </div>
-                    <div class="rede-right">
-                        <div class="swiper-container sw-rede">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="sw-rede-box">
-                                        <img src="images/rede-01.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="sw-rede-box">
-                                        <img src="images/rede-01.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="sw-rede-box">
-                                        <img src="images/rede-01.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="sw-rede-up-bt">
-                            <i class="fas fa-chevron-up"></i>
-                        </button>
-                        <button class="sw-rede-down-bt">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+        <!-- // life -->
 
-                    </div>
-                </div>
-            </div>
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.2109255502505!2d128.591859515624!3d35.868347580151095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e3c3dd62828f%3A0xb36b33bf2f38782a!2z6re466aw7Lu07ZOo7YSw7JWE7Yq47ZWZ7JuQIOuMgOq1rOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1634177022962!5m2!1sko!2skr"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <img src="images/contact.jpg" alt="">
         </section>
-        <!-- // 리디자인 영역 -->
-        <!-- 퍼블리싱 영역 -->
-        <section class="publ" id="publ">
-            <h2 class="publ-tit">web publishing</h2>
-            <div class="publ-wrap">
-                <div class="container clearfix">
-                    <button class="publ-up-bt">
-                        <i class="fas fa-chevron-up"></i>
-                    </button>
-                    <button class="publ-down-bt ">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="publ-slide">
-                        <div class="swiper-container sw-publ">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="publ-box-1">
-                                        <div class="publ-box-left clearfix">
-                                            <img src="images/publ-1.png" alt="">
-                                        </div>
-                                        <div class="publ-box-right">
-                                            <div class="publ-txt clearfix">
-                                                <div class="publ-txt-1">
-                                                    <p><b>Project</b></p>
-                                                    <p><b>Date</b></p>
-                                                    <p><b>Program</b></p>
-                                                </div>
-                                                <div class="publ-txt-2">
-                                                    <p>STX 건설</p>
-                                                    <p> 2021.09</p>
-                                                    <p><i class="fab fa-html5"></i>
-                                                        <i class="fab fa-css3-alt"></i>
-                                                        <i class="fab fa-github-square"></i>
-                                                        <i class="fab fa-js-square"></i>
-                                                    </p>
-                                                </div>
-
-                                            </div>
-                                            <div class="publ-bt">
-                                                <a href="https://haeun0.github.io/stxconst/" target="blank"
-                                                    class="publ-process-bt">Work</a>
-                                                <a href="https://github.com/haeun0/stxconst/" target="blank"
-                                                    class="publ-git-bt">Git Hub</a>
-                                                <a href="http://www.stxconst.co.kr/" target="blank"
-                                                    class="publ-work-bt">Origin</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="publ-box-1">
-                                        <div class="publ-box-left clearfix">
-                                            <img src="images/publ-2.png" alt="">
-                                        </div>
-                                        <div class="publ-box-right">
-                                            <div class="publ-txt clearfix">
-                                                <div class="publ-txt-1">
-                                                    <p><b>Project</b></p>
-                                                    <p><b>Date</b></p>
-                                                    <p><b>Program</b></p>
-                                                </div>
-                                                <div class="publ-txt-2">
-                                                    <p>풀무원 녹즙</p>
-                                                    <p> 2021.09</p>
-                                                    <p><i class="fab fa-html5"></i>
-                                                        <i class="fab fa-css3-alt"></i>
-                                                        <i class="fab fa-github-square"></i>
-                                                        <i class="fab fa-js-square"></i>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="publ-bt">
-                                                <a href="https://haeun0.github.io/greenjuice/" target="blank"
-                                                    class="publ-process-bt">Work</a>
-                                                <a href="https://github.com/haeun0/greenjuice/" target="blank"
-                                                    class="publ-git-bt">Git Hub</a>
-                                                <a href="https://greenjuice.pulmuone.com/" target="blank"
-                                                    class="publ-work-bt">Origin</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="publ-box-1">
-                                        <div class="publ-box-left clearfix">
-                                            <img src="images/publ-3.png" alt="">
-                                        </div>
-                                        <div class="publ-box-right">
-                                            <div class="publ-txt clearfix">
-                                                <div class="publ-txt-1">
-                                                    <p><b>Project</b></p>
-                                                    <p><b>Date</b></p>
-                                                    <p><b>Program</b></p>
-                                                </div>
-                                                <div class="publ-txt-2">
-                                                    <p>한살림 장보기</p>
-                                                    <p> 2021.10</p>
-                                                    <p><i class="fab fa-html5"></i>
-                                                        <i class="fab fa-css3-alt"></i>
-                                                        <i class="fab fa-github-square"></i>
-                                                        <i class="fab fa-js-square"></i>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="publ-bt">
-                                                <a href="https://haeun0.github.io/hansalim/" target="blank"
-                                                    class="publ-process-bt">Work</a>
-                                                <a href="https://github.com/haeun0/hansalim/" target="blank"
-                                                    class="publ-git-bt">Git Hub</a>
-                                                <a href="https://shop.hansalim.or.kr/" target="blank"
-                                                    class="publ-work-bt">Origin</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="publ-box-1">
-                                        <div class="publ-box-left clearfix">
-                                            <img src="images/publ-4.png" alt="">
-                                        </div>
-                                        <div class="publ-box-right">
-                                            <div class="publ-txt clearfix">
-                                                <div class="publ-txt-1">
-                                                    <p><b>Project</b></p>
-                                                    <p><b>Date</b></p>
-                                                    <p><b>Program</b></p>
-                                                </div>
-                                                <div class="publ-txt-2">
-                                                    <p>풀무원 샘물</p>
-                                                    <p> 2021.10</p>
-                                                    <p><i class="fab fa-html5"></i>
-                                                        <i class="fab fa-css3-alt"></i>
-                                                        <i class="fab fa-github-square"></i>
-                                                        <i class="fab fa-js-square"></i>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="publ-bt">
-                                                <a href="https://haeun0.github.io/pulmuonewater/" target="blank"
-                                                    class="publ-process-bt">Work</a>
-                                                <a href="https://github.com/haeun0/pulmuonewater/" target="blank"
-                                                    class="publ-git-bt">Git Hub</a>
-                                                <a href="https://www.pulmuonewater.com/" target="blank"
-                                                    class="publ-work-bt">Origin</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="publ-box-1 clearfix">
-                                        <div class="publ-box-left">
-                                            <img src="images/publ-5.png" alt="">
-                                        </div>
-                                        <div class="publ-box-right">
-                                            <div class="publ-txt clearfix">
-                                                <div class="publ-txt-1">
-                                                    <p><b>Project</b></p>
-                                                    <p><b>Date</b></p>
-                                                    <p><b>Program</b></p>
-                                                </div>
-                                                <div class="publ-txt-2">
-                                                    <p>NEXUS</p>
-                                                    <p> 2021.11</p>
-                                                    <p><i class="fab fa-html5"></i>
-                                                        <i class="fab fa-css3-alt"></i>
-                                                        <i class="fab fa-github-square"></i>
-                                                        <i class="fab fa-js-square"></i>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="publ-bt">
-                                                <a href="https://haeun0.github.io/nexus/" target="blank"
-                                                    class="publ-process-bt">Work</a>
-                                                <a href="https://github.com/haeun0/nexus/" target="blank"
-                                                    class="publ-git-bt">Git Hub</a>
-                                                <a href="https://nexus-official.com/" target="blank"
-                                                    class="publ-work-bt">Origin</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- // 퍼블리싱 영역 -->
-        <!-- 기타 영역 -->
-        <section class="others" id="others">
-            <h2 class="tit">others</h2>
-            <div class="container clearfix">
-                <div class="potho-wrap">
-                    <div class="others-left">
-                        <div class="others-main">
-                            <div class="others-main-box">
-                                <img src="images/others-img-1.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-2.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-3.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-4.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-5.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-6.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-7.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-8.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-10.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-11.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-12.jpg" alt="">
-                            </div>
-                            <div class="others-main-box">
-                                <img src="images/others-img-13.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="others-right">
-                        <div class="swiper-container sw-others">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="0">
-                                        <img src="images/others-img-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="1">
-                                        <img src="images/others-img-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="2">
-                                        <img src="images/others-img-3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="3">
-                                        <img src="images/others-img-4.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="4">
-                                        <img src="images/others-img-5.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="5">
-                                        <img src="images/others-img-6.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="6">
-                                        <img src="images/others-img-7.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="7">
-                                        <img src="images/others-img-8.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="8">
-                                        <img src="images/others-img-10.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="9">
-                                        <img src="images/others-img-11.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="10">
-                                        <img src="images/others-img-12.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="others-box" data-other-box="11">
-                                        <img src="images/others-img-13.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="others-video clearfix">
-                    <div class="others-video-link">
-                        <a href="#" target="blank"></a>
-                    </div>
-                    <div class="others-video-link">
-                        <a href="#" target="blank"></a>
-                    </div>
-                    <div class="others-video-link">
-                        <a href="#" target="blank"></a>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </section>
-        <!-- // 기타 영역 -->
-        <!-- 라이프 영역 -->
-        <section class="life" id="life">
-            <h2 class="tit">LIFE&LIKE</h2>
-            <div class="container clearfix">
-                <div class="life-box">
-                    <div class="life-img-1"></div>
-                </div>
-                <div class="life-box">
-                    <div class="life-img-2">
-                        <img src="images/life-2.gif" alt="">
-                    </div>
-                    <p class="life-txt-bot-1">
-                        제일 좋아하는 음식은 치킨이고<br>
-                        찜닭, 닭갈비, 맥스파이시 치킨버거등<br>
-                        닭요리는 모두 OK
-                    </p>
-                </div>
-                <div class="life-box">
-                    <p class="life-txt-top">
-                        하루 일과가 끝나고 돌아가는 길에<br>
-                        피곤하지만 10분 정도 걸으면서<br>
-                        생각하고 사진 찍는걸 좋아함
-                    </p>
-                    <div class="life-img-3"></div>
-                </div>
-                <div class="life-box">
-                    <div class="life-img-4"></div>
-                    <p class="life-txt-bot-2">
-                        산책하다 만나는 길냥이는 덤 <i class="fas fa-paw"></i>
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- // 라이프 영역 -->
-        <!-- 하단 영역 -->
-        <footer class="footer">
-            <h2 class="tit">THANK YOU !</h2>
-            <div class="footer-download">
-                <a href="#">Download Portfolio</a>
-            </div>
-        </footer>
-        <!-- //  하단 영역 -->
+        <!-- // contact -->
     </div>
-
-
 </body>
 
 </html>

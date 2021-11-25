@@ -60,8 +60,9 @@ $(document).ready(function () {
     });
 
 
-    // possibility 좌우 슬라이드
-    
+    // possibility 
+    let possi_box = $('.possibox')
+
 
 
 

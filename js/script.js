@@ -18,12 +18,18 @@ $(document).ready(function () {
 
     // 주메뉴 관련 코드
     let nav = $('.nav');
+    let profile = $('.profile');
+    let profile_tit = $('.profile .tit');
     $(window).scroll(function () {
         let scrollbar = $(window).scrollTop();
-        if (scrollbar > 778) {
+        if (scrollbar > 770) {
             nav.addClass('nav-fix');
+            profile.addClass('profile-fix');
+            profile_tit.addClass('tit-fix');
         } else {
             nav.removeClass('nav-fix');
+            profile.removeClass('profile-fix');
+            profile_tit.removeClass('tit-fix');
         }
     });
 
@@ -53,6 +59,9 @@ $(document).ready(function () {
         });
     });
 
+
+    // possibility 좌우 슬라이드
+    
 
 
 
@@ -205,6 +214,72 @@ $(document).ready(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+    });
+
+    // skil 
+    var bar_html = new ProgressBar.Circle(html, {
+        strokeWidth: 6,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#5d4b63',
+        trailColor: '#eee',
+        trailWidth: 1,
+        svgStyle: null
+    });
+
+
+
+    var bar_css = new ProgressBar.Circle(css, {
+        strokeWidth: 6,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#a38182',
+        trailColor: '#eee',
+        trailWidth: 1,
+        svgStyle: null
+    });
+
+
+
+    var bar_photoshop = new ProgressBar.Circle(photoshop, {
+        strokeWidth: 6,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#cecbda',
+        trailColor: '#eee',
+        trailWidth: 1,
+        svgStyle: null
+    });
+
+
+
+    var bar_illust = new ProgressBar.Circle(illust, {
+        strokeWidth: 6,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#d74d63',
+        trailColor: '#eee',
+        trailWidth: 1,
+        svgStyle: null
+    });
+
+
+
+
+    // 스크롤바의 위치를 체크한다.
+    $(window).scroll(function () {
+        // 스크롤바의 위치 값
+        var scY = $(window).scrollTop();
+        console.log(scY);
+
+        if (scY > 700) {
+            // 애니메이션 실행
+            bar_html.animate(0.9); // Number from 0.0 to 1.0
+            bar_css.animate(0.88); // Number from 0.0 to 1.0
+            bar_photoshop.animate(0.95); // Number from 0.0 to 1.0
+            bar_illust.animate(0.85); // Number from 0.0 to 1.0
+        }
+
     });
 
 

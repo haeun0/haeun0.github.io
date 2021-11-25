@@ -186,7 +186,7 @@ body {
     margin-left: 8rem;
 }
 
-.visual-img  img {
+.visual-img img {
     height: 77.1rem;
 }
 
@@ -259,6 +259,10 @@ body {
     padding-top: 1rem;
 }
 
+.profile-fix {
+    padding-top: 9rem;
+}
+
 .profile .container {
     margin-top: 17rem;
 }
@@ -276,7 +280,10 @@ body {
     letter-spacing: 0.012rem;
     text-transform: uppercase;
     margin-bottom: 3rem;
+}
 
+.tit-fix {
+    padding-top: 9rem;
 }
 
 .profile .tit {
@@ -311,17 +318,229 @@ body {
     right: 0;
     top: 0;
     display: block;
-    float: left;
-    width: 33%;
+    width: 370px;
+    height: 100%;
 }
 
 
+.skill-list {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
 
-/* 수정 후 삭제 */
-.profile-3 img {
+.skill-list li {
+    position: relative;
+    display: block;
+    width: 50%;
+    float: left;
+    margin-bottom: 4rem;
+}
+
+.skill {
+    position: relative;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+}
+
+.skill-list span {
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 0.2rem;
+    background-color: #b9b9b9;
+    margin: 0 auto;
+    margin-top: 1.7rem;
+}
+
+.skill-list p {
+    position: relative;
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: -0.0425rem;
+    line-height: 2;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.skill-plus {
+    margin-top: 3rem;
+}
+
+.skill-list p:last-child {
+    line-height: 1.2;
+    margin-top: 1.7rem;
+}
+
+/* possibilty 영역 */
+.possi {
+    position: relative;
+    display: block;
+    background-color: #E9E2E7;
+    width: 100%;
+    height: 110rem;
+    padding-top: 5rem;
+}
+
+.possi .container {}
+
+.possi-sub-tit {
+    position: relative;
+    display: block;
+    font-size: 3.3rem;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: -0.25rem;
+    line-height: 1;
+    padding-top: 11rem;
+    margin-bottom: 6.5rem;
+}
+
+.possi-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 18rem;
+    float: left;
+
+}
+
+.possi-icon {
+    position: relative;
+    display: block;
+    width: 18rem;
+    height: 18rem;
+    background-color: #cecbda;
+    border: 0.1rem solid #cecbda;
+    border-radius: 18rem;
+    float: left;
+
+}
+
+.possi-icon i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 9.5rem;
+    color: #fff;
+}
+
+.possi-txt {
+    position: absolute;
+    left: 22rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+.possi-box p {
+    position: relative;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: -0.0425rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.possi-box span {
+    position: relative;
+    display: block;
+    font-size: 2.1rem;
+    font-weight: 200;
+    color: #333;
+    line-height: 1.1;
+    letter-spacing: -0.0425rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.possi-box-left {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 18rem;
+    float: left;
+    margin: 3.2rem 0;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.6);
+    background-color: red;
+}
+
+.possi-txt-left {
+    position: absolute;
+    right: 22rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    margin: 3.2rem 0;
+}
+
+.possi-box-left p {
+    position: relative;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: -0.0425rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align-last: right;
+}
+
+.possi-box-left span {
+    position: relative;
+    display: block;
+    font-size: 2.1rem;
+    font-weight: 200;
+    color: #333;
+    line-height: 1.1;
+    letter-spacing: -0.0425rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align-last: right;
+}
+
+.possi-icon-left {
     position: absolute;
     right: 0;
     top: 0;
+    display: block;
+    width: 18rem;
+    height: 18rem;
+    background-color: #cecbda;
+    border: 0.1rem solid #cecbda;
+    border-radius: 18rem;
+    margin-top: 3.2rem;
+}
+
+.possi-icon-left i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 9.5rem;
+    color: #fff;
+}
+
+.possi-3 {
+    margin-top: 3.2rem;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.6);
+}
+
+.possi-3 .possi-icon {
+    margin-top: 3.2rem;
+}
+
+.possi-3 .possi-txt {
+    margin-top: 3.2rem;
 }
 
 
@@ -374,6 +593,7 @@ body {
     width: 49rem;
     height: 63rem;
 }
+
 .rede-cont-box {
     position: absolute;
     left: 0;
@@ -464,6 +684,7 @@ body {
     width: 100%;
     height: 100%;
 }
+
 .rede-right {
     position: relative;
     float: left;
@@ -471,7 +692,9 @@ body {
     width: 103rem;
     height: 63rem;
 }
+
 .sw-rede {}
+
 .sw-rede-box {
     position: relative;
     width: 100%;
@@ -570,7 +793,7 @@ body {
     font-size: 4rem;
     border: none;
     background-color: rgba(255, 255, 255, 0.0);
-    
+
     z-index: 999;
     cursor: pointer;
 }
@@ -722,8 +945,7 @@ body {
     padding-top: 15rem;
 }
 
-.others .container {
-}
+.others .container {}
 
 .potho-wrap {
     height: 77rem;
@@ -841,8 +1063,9 @@ body {
     display: block;
     width: 100%;
     height: 80.4%;
-    background-color: royalblue;
+    background: url('../images/life-1.jpg')no-repeat center;
 }
+
 .life-img-2 {
     position: absolute;
     left: 0;
@@ -850,9 +1073,13 @@ body {
     display: block;
     width: 100%;
     height: 80.4%;
-    background-color: royalblue;
-
+    overflow: hidden;
 }
+
+.life-img-2 img {
+    width: 100%;
+}
+
 .life-img-3 {
     position: absolute;
     left: 0;
@@ -860,8 +1087,9 @@ body {
     display: block;
     width: 100%;
     height: 80.4%;
-    background-color: royalblue;
+    background: url('../images/life-3.jpg')no-repeat center;
 }
+
 .life-img-4 {
     position: absolute;
     left: 0;
@@ -869,8 +1097,46 @@ body {
     display: block;
     width: 100%;
     height: 80.4%;
-    background-color: royalblue;
+    background: url('../images/life-4.jpg')no-repeat center;
 }
+
+.life-box {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: -0.0425rem;
+    line-height: 1.3;
+    font-family: 'Noto Sans KR', sans-serif;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.life-txt-top {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.life-txt-bot-1 {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.life-txt-bot-2 {
+    position: absolute;
+    left: 50%;
+    bottom: 7%;
+    transform: translate(-50%, -50%);
+}
+
+.life-txt-bot-2 i {
+    color: #5d4b63;
+}
+
 
 
 /* 하단 영역 */
@@ -881,7 +1147,7 @@ body {
     height: 70rem;
 }
 
-.footer > h2 {
+.footer>h2 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

@@ -138,71 +138,7 @@ $(document).ready(function () {
         });
     });
 
-    // // 퍼블리싱 슬라이드 영역 - 가로
-    // // let appendNumber = 600;
-    // // let prependNumber = 1;
-    // const swiper = new Swiper('.sw-publ', {
-    //     // direction: "vertical",
-    //     slidesPerView: 3,
-    //     // centeredSlides: true,
-    //     spaceBetween: 10,
-    //     // loop: true,
-    //     // pagination: {
-    //     //     el: '.swiper-pagination',
-    //     //     type: 'fraction',
-    //     // },
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    //     // virtual: {
-    //     //     slides: (function () {
-    //     //         const slides = [];
-    //     //         for (var i = 0; i < 600; i += 1) {
-    //     //             slides.push('Slide ' + (i + 1));
-    //     //         }
-    //     //         return slides;
-    //     //     })(),
-    //     // },
-    // });
 
-    // document
-    //     .querySelector('.slide-1')
-    //     .addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         swiper.slideTo(0, 0);
-    //     });
-
-    // document
-    //     .querySelector('.slide-250')
-    //     .addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         swiper.slideTo(249, 0);
-    //     });
-
-    // document
-    //     .querySelector('.slide-500')
-    //     .addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         swiper.slideTo(499, 0);
-    //     });
-
-    // document
-    //     .querySelector('.prepend-2-slides')
-    //     .addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         swiper.virtual.prependSlide([
-    //             'Slide ' + --prependNumber,
-    //             'Slide ' + --prependNumber,
-    //         ]);
-    //     });
-
-    // document
-    //     .querySelector('.append-slide')
-    //     .addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         swiper.virtual.appendSlide('Slide ' + ++appendNumber);
-    //     });
 
     // 기타영역 슬라이드
     var swiper = new Swiper(".sw-others", {
@@ -219,7 +155,7 @@ $(document).ready(function () {
 
     // skil 
     var bar_html = new ProgressBar.Circle(html, {
-        strokeWidth: 6,
+        strokeWidth: 7,
         easing: 'easeInOut',
         duration: 1400,
         color: '#5d4b63',
@@ -231,7 +167,7 @@ $(document).ready(function () {
 
 
     var bar_css = new ProgressBar.Circle(css, {
-        strokeWidth: 6,
+        strokeWidth: 7,
         easing: 'easeInOut',
         duration: 1400,
         color: '#a38182',
@@ -243,7 +179,7 @@ $(document).ready(function () {
 
 
     var bar_photoshop = new ProgressBar.Circle(photoshop, {
-        strokeWidth: 6,
+        strokeWidth: 7,
         easing: 'easeInOut',
         duration: 1400,
         color: '#cecbda',
@@ -255,7 +191,7 @@ $(document).ready(function () {
 
 
     var bar_illust = new ProgressBar.Circle(illust, {
-        strokeWidth: 6,
+        strokeWidth: 7,
         easing: 'easeInOut',
         duration: 1400,
         color: '#d74d63',

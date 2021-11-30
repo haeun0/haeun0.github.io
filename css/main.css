@@ -233,7 +233,7 @@ body {
     text-align: center;
 }
 
-.menu > li:last-child {
+.menu>li:last-child {
     margin-right: 0;
 }
 
@@ -304,6 +304,42 @@ body {
     width: 33%;
 }
 
+.profile-1-top {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.profile-1-bottom {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 10rem;
+}
+
+.profile-1-bottom span {
+    position: relative;
+    float: left;
+    display: block;
+    width: 0.2rem;
+    height: 100%;
+    background-color: #5d4b63;
+    margin-right: 1rem;
+}
+
+.profile-1-bottom p {
+    position: relative;
+    float: left;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.35;
+    letter-spacing: -0.0425rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .profile-2 {
     padding-left: 10rem;
     position: relative;
@@ -324,7 +360,7 @@ body {
     display: block;
     width: 100%;
     height: 32%;
-    margin-bottom: 18%;
+    margin-bottom: 15%;
 }
 
 .profile-txt:last-child {
@@ -771,9 +807,9 @@ body {
 
 .rede-right img {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
 }
 
 
@@ -1062,18 +1098,35 @@ body {
     width: 33%;
     height: 100%;
     margin-right: 0.5%;
-    background: url('../images/video-1.jpg') no-repeat;
-    background-size: cover;
     cursor: pointer;
 }
 
+.video-1 {
+    background: url('../images/video-1.jpg') no-repeat;
+    background-size: cover;
+}
+
+.video-2 {
+    background: url('../images/video-2.jpg') no-repeat;
+    background-size: cover;
+}
+
+.video-3 {
+    background: url('../images/video-3.jpg') no-repeat;
+    background-size: cover;
+}
 
 
 .others-video-link:last-child {
     margin-right: 0;
 }
 
-
+.others-video-link a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
 
 /* 라이프 영역 */
@@ -1186,7 +1239,7 @@ body {
     height: 88rem;
 }
 
-.footer > h2 {
+.footer>h2 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

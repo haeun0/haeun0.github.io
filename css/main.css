@@ -317,8 +317,44 @@ body {
     position: absolute;
     left: 30%;
     top: 0;
-
 }
+
+.profile-txt {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 32%;
+    margin-bottom: 18%;
+}
+
+.profile-txt:last-child {
+    margin-bottom: 0;
+}
+
+.profile-txt p {
+    position: relative;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: -0.0425rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+.profile-txt span {
+    position: relative;
+    display: block;
+    font-size: 2.1rem;
+    font-weight: 200;
+    color: #333;
+    line-height: 1.3;
+    letter-spacing: -0.0425rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
 
 .profile-3 {
     position: absolute;
@@ -1163,10 +1199,11 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 30rem;
+    top: 31rem;
     text-align: center;
     font-size: 1.8rem;
     font-weight: 300;
+    line-height: 1.6;
     letter-spacing: -0.017rem;
     font-family: 'Roboto', sans-serif;
 }

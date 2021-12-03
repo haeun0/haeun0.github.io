@@ -25,11 +25,9 @@ $(document).ready(function () {
         if (scrollbar > 770) {
             nav.addClass('nav-fix');
             profile.addClass('profile-fix');
-            profile_tit.addClass('tit-fix');
         } else {
             nav.removeClass('nav-fix');
             profile.removeClass('profile-fix');
-            profile_tit.removeClass('tit-fix');
         }
     });
 

@@ -276,8 +276,10 @@ body {
 
 .tit {
     position: absolute;
-    left: 19.5rem;
-    top: 10rem;
+    /* left: 19.5rem; */
+    left: 0;
+    /* top: 10rem; */
+    top: 0;
     display: block;
     font-size: 4.4rem;
     font-weight: 600;
@@ -294,7 +296,7 @@ body {
 }
 
 .profile .tit {
-    /* margin-bottom: 8.7rem; */
+    top: -5rem;
 }
 
 .profile-1 {
@@ -463,8 +465,8 @@ body {
     display: block;
     background-color: #E9E2E7;
     width: 100%;
-    height: 110rem;
-    padding-top: 5rem;
+    height: 100rem;
+    padding-top: 7rem;
 }
 
 .possi .container {}
@@ -477,7 +479,7 @@ body {
     color: #333;
     letter-spacing: -0.25rem;
     line-height: 1;
-    padding-top: 11rem;
+    padding-top: 5rem;
     margin-bottom: 6.5rem;
 }
 
@@ -633,7 +635,7 @@ body {
     position: relative;
     display: block;
     background-color: #CDCBD9;
-    padding-top: 9.5rem;
+    padding-top: 2.5rem;
     padding-bottom: 15rem;
 }
 
@@ -771,6 +773,7 @@ body {
     display: block;
     width: 103rem;
     height: 63rem;
+    background-color: #b9afbc;
 }
 
 .sw-rede {}
@@ -788,7 +791,7 @@ body {
     color: rgba(255, 255, 255, 0.6);
     font-size: 4rem;
     border: none;
-    background-color: #b9afbc;
+    background-color: rgba(255, 255, 255, 0.0);
     z-index: 999;
     cursor: pointer;
 }
@@ -800,7 +803,7 @@ body {
     color: rgba(255, 255, 255, 0.6);
     font-size: 4rem;
     border: none;
-    background-color: #b9afbc;
+    background-color: rgba(255, 255, 255, 0.0);
     z-index: 999;
     cursor: pointer;
 }
@@ -821,19 +824,26 @@ body {
     padding-top: 5.5rem;
 }
 
+#publ {
+    position: relative;
+    left: 0;
+    top: -15rem;
+    display: inline-block;
+}
+
 .publ-wrap {
     position: relative;
     display: block;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b9afbc+75,cdcbd9+75,cdcbd9+75 */
-    background: #b9afbc;
+    /* background: #b9afbc; */
     /* Old browsers */
-    background: -moz-linear-gradient(left, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%);
+    /* background: -moz-linear-gradient(left, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%); */
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%);
+    /* background: -webkit-linear-gradient(left, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%); */
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%);
+    /* background: linear-gradient(to right, #b9afbc 67%, #cdcbd9 67%, #cdcbd9 67%); */
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b9afbc', endColorstr='#cdcbd9', GradientType=1);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b9afbc', endColorstr='#cdcbd9', GradientType=1); */
     /* IE6-9 */
     height: 78rem;
 }
@@ -841,7 +851,7 @@ body {
 /* 수정 */
 .publ-tit {
     position: absolute;
-    right: 19.5rem;
+    left: 19.5rem;
     top: 0;
     display: block;
     font-size: 4.4rem;
@@ -864,7 +874,9 @@ body {
 .publ-up-bt {
     position: absolute;
     right: 30%;
-    top: 0.5rem;
+    /* left: 0; */
+    /* top: 0.5rem; */
+    top: 1rem;
     color: rgba(255, 255, 255, 0.6);
     font-size: 4rem;
     border: none;
@@ -878,7 +890,9 @@ body {
 .publ-down-bt {
     position: absolute;
     right: 30%;
-    bottom: 0.5rem;
+    /* left: 0; */
+    /* bottom: 0.5rem; */
+    bottom: 2.5rem;
     color: rgba(255, 255, 255, 0.6);
     font-size: 4rem;
     border: none;
@@ -1021,6 +1035,10 @@ body {
     padding-top: 15rem;
 }
 
+.others .tit {
+    top: -5rem;
+}
+
 .others .container {}
 
 .potho-wrap {
@@ -1138,6 +1156,10 @@ body {
 
 .life .container {
     height: 70rem;
+}
+
+.life .tit {
+    top: 10rem;
 }
 
 .life-box {

@@ -9,7 +9,7 @@ $(document).ready(function () {
     let gotop = $('.gotop');
     $(window).scroll(function () {
         let scrollbar = $(window).scrollTop();
-        if (scrollbar > 778) {
+        if (scrollbar > 882) {
             gotop.addClass('gotop-active');
         } else {
             gotop.removeClass('gotop-active');
@@ -22,7 +22,7 @@ $(document).ready(function () {
     let profile_tit = $('.profile .tit');
     $(window).scroll(function () {
         let scrollbar = $(window).scrollTop();
-        if (scrollbar > 770) {
+        if (scrollbar > 882) {
             nav.addClass('nav-fix');
             profile.addClass('profile-fix');
         } else {
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 
     // possibility 
-    let possi_box = $('.possibox')
+    let possi_box = $('.possibox');
 
 
 
@@ -135,7 +135,6 @@ $(document).ready(function () {
             others_main_box.eq(temp).show();
         });
     });
-
 
 
     // 기타영역 슬라이드

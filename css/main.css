@@ -623,6 +623,40 @@ body {
     margin-top: 3.2rem;
 }
 
+.possi-1 {
+    transform: translateX(8%);
+    opacity: 0;
+    transition: transform 1.5s, opacity 0.5s;
+}
+
+.possi-1-active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.possi-2 {
+    transform: translateX(-8%);
+    opacity: 0;
+    transition: transform 2s, opacity 0.7s;
+}
+
+.possi-2-active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.possi-3 {
+    transform: translateX(8%);
+    opacity: 0;
+    transition: transform 2.5s, opacity 1.0s;
+}
+
+.possi-3-active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
 
 #redesign {
     position: absolute;
@@ -1136,13 +1170,14 @@ body {
     padding-top: 8rem;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.0);
-    transition: background-color 0.5s;
+    border: 0.3rem solid #fa0009;
+    transition: background-color 0.5s, opacity 0.5s, border 0.5s;
 }
 
 
 .others-video-link:hover .video-i {
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.52);
+    background-color: rgba(255, 255, 255, 0.62);
 }
 
 

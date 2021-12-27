@@ -58,8 +58,37 @@ $(document).ready(function () {
     });
 
 
-    // possibility 
-    let possi_box = $('.possibox');
+    // possibility 영역
+    $('.possi-1').waypoint(function (dir) {
+        if (dir == "down") {
+            $('.possi-1').addClass('possi-1-active');
+        } else {
+
+        }
+    }, {
+        offset: '80%'
+    });
+
+    $('.possi-2').waypoint(function (dir) {
+        if (dir == "down") {
+            $('.possi-2').addClass('possi-2-active');
+        } else {
+
+        }
+    }, {
+        offset: '80%'
+    });
+
+    $('.possi-3').waypoint(function (dir) {
+        if (dir == "down") {
+            $('.possi-3').addClass('possi-3-active');
+        } else {
+
+        }
+    }, {
+        offset: '88%'
+    });
+
 
 
 
@@ -137,6 +166,8 @@ $(document).ready(function () {
     });
 
 
+
+
     // 기타영역 슬라이드
     var swiper = new Swiper(".sw-others", {
         slidesPerView: 4,
@@ -160,6 +191,8 @@ $(document).ready(function () {
         trailWidth: 1,
         svgStyle: null
     });
+
+
 
 
 
